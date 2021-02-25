@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <title>Frontend Mentor | Pomodoro app</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h2 class="center title">pomodoro</h2>
+      <nav id="nav">
+        <div id="marker"></div>
+        <ul>
+          <li class="body1 active pointer">pomodoro</li>
+          <li class="body1 pointer">short break</li>
+          <li class="body1 pointer">long break</li>
+        </ul>
+      </nav>
+      <section id="timer" class="center">
+        <div id="inner-timer" class="center"></div>
+        <svg id="circle" class="center">
+          <circle r="163" cx="50%" cy="50%"></circle>
+        </svg>
+        <h1>17:59</h1>
+        <h3 class="pointer">stop</h3>
+      </section>
+      <img
+        id="settings"
+        class="pointer"
+        height="27px"
+        width="28px"
+        src="/assets/icon-settings.svg"
+      />
+    </div>
+  </body>
+</html>

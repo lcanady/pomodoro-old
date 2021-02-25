@@ -1,0 +1,184 @@
+/*
+    CSS variables are set in :root to make them accessable to /all/
+    HTML elements, including body, and even <html>!
+*/
+:root {
+  --shadow: #161932;
+  --dark: #1e213f;
+  --blue-200: #d7e0ff;
+  --blue-100: #eff1fa;
+  --light: #ffffff;
+  --red: #f87070;
+  --cyan: #70f3f8;
+  --purple: #d881f8;
+  --margin-top: 5vh;
+}
+
+/*
+    The star selector is for 'all elements' - I beleive within the body, is the
+    distinction.
+*/
+* {
+  font-family: "Kumbh Sans", sans-serif;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  color: var(--light);
+}
+
+body {
+  background-color: var(--dark);
+  overflow: hidden;
+}
+
+h1 {
+  top: calc(50% - 100px / 2);
+  width: 100%;
+  text-align: center;
+  z-index: 20;
+  position: absolute;
+  font-size: 100px;
+}
+
+h2 {
+  color: var(--blue-200);
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 34px;
+}
+
+h3 {
+  z-index: 50;
+  position: absolute;
+  color: var(--blue-200);
+  font-weight: bold;
+  font-size: 16px;
+  width: 100%;
+  text-transform: uppercase;
+  line-height: 16px;
+  letter-spacing: 15px;
+  top: 265px;
+  text-align: center;
+}
+
+/*
+    Structural ID rules.
+*/
+#wrapper {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#nav {
+  margin-top: 7vh;
+  z-index: 20;
+  position: relative;
+  left: calc(50% - 400px / 2);
+  padding: 10px 10px;
+  width: 373px;
+  height: 62px;
+  border-radius: 31px;
+  background-color: var(--shadow);
+}
+
+#nav ul {
+  z-index: 15;
+  position: absolute;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#nav ul li {
+  width: 120px;
+  text-align: center;
+  opacity: 40%;
+  margin-top: 15px;
+}
+
+#marker {
+  z-index: 15;
+  position: absolute;
+  width: 120px;
+  height: 42px;
+  background-color: var(--red);
+  border-radius: 50px;
+}
+
+#timer {
+  position: relative;
+  display: flex;
+  border-radius: 50%;
+  margin-top: 7vh;
+  height: 410px;
+  width: 410px;
+  background: linear-gradient(315deg, #2e325a 0%, #0e112a 100%);
+  box-shadow: -50px -50px 100px #272c5a, 50px 50px 100px #121530;
+}
+
+#circle {
+  position: absolute;
+
+  width: 410px;
+  height: 410px;
+  z-index: 20;
+}
+
+#circle circle {
+  fill: transparent;
+  stroke: var(--red);
+  stroke-width: 10;
+  stroke-dasharray: 1024 1024;
+  stroke-dashoffset: 300;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+#inner-timer {
+  z-index: 0;
+  margin: auto;
+  width: 366px;
+  height: 366px;
+  background-color: var(--shadow);
+  border-radius: 50%;
+}
+
+#settings {
+  position: absolute;
+  bottom: 5vh;
+  left: 50%;
+}
+
+/*
+    Modifier rules.
+*/
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.center-hw {
+  margin: auto;
+}
+.title {
+  margin-top: 5vh;
+}
+
+.body1 {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 16px;
+  color: var(--blue-100);
+}
+
+.active {
+  opacity: 1 !important;
+  color: var(--shadow);
+}
+
+.pointer {
+  cursor: pointer;
+}
