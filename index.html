@@ -21,14 +21,17 @@
   <body>
     <div id="wrapper">
       <h2 class="center title">pomodoro</h2>
-      <nav id="nav">
-        <div id="marker"></div>
-        <ul>
-          <li class="body1 active pointer">pomodoro</li>
-          <li class="body1 pointer">short break</li>
-          <li class="body1 pointer">long break</li>
-        </ul>
-      </nav>
+      <div id="navContainer">
+        <nav id="nav">
+          <div id="navBg"></div>
+          <ul>
+            <li class="navlink body1 active pointer">pomodoro</li>
+            <li class="navlink body1 pointer">short break</li>
+            <li class="navlink body1 pointer">long break</li>
+          </ul>
+        </nav>
+        <div id="bgcontainer"></div>
+      </div>
       <section id="timer" class="center">
         <div id="inner-timer" class="center"></div>
         <svg id="circle" class="center">
@@ -45,5 +48,6 @@
         src="/assets/icon-settings.svg"
       />
     </div>
+    <script src="js/index.js"></script>
   </body>
 </html>

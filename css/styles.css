@@ -71,41 +71,60 @@ h3 {
   flex-direction: column;
 }
 
-#nav {
+#navContainer {
   margin-top: 7vh;
-  z-index: 20;
-  position: relative;
+  width: 100%;
+  display: flex;
+}
+
+#nav {
   left: calc(50% - 400px / 2);
-  padding: 10px 10px;
-  width: 373px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  z-index: 20;
   height: 62px;
-  border-radius: 31px;
-  background-color: var(--shadow);
+  width: 400px;
+  padding-left: 10px;
 }
 
 #nav ul {
   z-index: 15;
+  width: 100%;
   position: absolute;
   display: flex;
   list-style: none;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 #nav ul li {
-  width: 120px;
+  width: calc(100%);
   text-align: center;
   opacity: 40%;
-  margin-top: 15px;
+  transition: opacity ease 200ms, color ease 200ms;
 }
 
-#marker {
+#navBg {
   z-index: 15;
+  left: 0;
   position: absolute;
-  width: 120px;
+  width: calc(100% / 3);
   height: 42px;
   background-color: var(--red);
   border-radius: 50px;
+  margin-left: 10px;
+  transition: left 300ms ease;
+}
+
+#bgcontainer {
+  z-index: 0;
+  position: relative;
+  width: 420px;
+  height: 62px;
+  left: calc(50% - 400px / 2);
+  border-radius: 31px;
+  background-color: var(--shadow);
 }
 
 #timer {
